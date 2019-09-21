@@ -1,0 +1,16 @@
+enum Status {
+    ACTIVE
+    INACTIVE
+    BLOCKED
+}
+
+type User {
+    id: ID!
+    profile: Profile!
+    name: String!
+    email: String!
+    profession: String!
+    salary: Float!
+    status: Status!
+}
+

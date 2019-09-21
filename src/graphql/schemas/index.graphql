@@ -1,0 +1,18 @@
+#import 'users/index.graphql'
+#import 'profiles/index.graphql'
+#import 'products/index.graphql'
+
+type Query {
+    user(id: ID!): User
+    users: [User!]!
+
+    profile(id: ID!): Profile
+    profiles: [Profile!]!
+
+    product(id: ID!): Product
+    products: [Product!]!
+}
+
+type Mutation {
+    createUser(name: String!, email: String!) : User!
+}

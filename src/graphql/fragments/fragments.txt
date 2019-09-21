@@ -1,0 +1,21 @@
+#Copy and paste it in GraphQL playground so that you see the result
+
+#QUERY: Uses the fragment bellow
+{ 
+  users {
+    ...wholeUser
+  }
+}
+
+
+#FRAGMENT: Creates a fragment which represents a full user
+fragment wholeUser on User {
+  id
+  name
+  email
+  salary
+  profile {
+    id
+    name
+  }
+}

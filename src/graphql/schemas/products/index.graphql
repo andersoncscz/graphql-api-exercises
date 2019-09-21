@@ -1,0 +1,8 @@
+type Product {
+    id: ID!
+    name: String!
+    price: Float!
+    discountPercentage: Float #not required
+    netValue: Float!
+}
+
