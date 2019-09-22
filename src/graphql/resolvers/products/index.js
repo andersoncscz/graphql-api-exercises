@@ -1,4 +1,5 @@
 import { products } from '../../../data'
+import { uniqueId } from 'lodash';
 
 export const resolvers = {
 
@@ -16,5 +17,16 @@ export const resolvers = {
     Query: {
         product: (_, { id }) => products.find(p => p.id === id),
         products: () => products
+    },
+
+    Mutation: {
+        createProduct: (_, { data }) => {
+            const product = {
+                id: uniqueId(),
+                ...data
+            }
+            products.push(product)
+            return product
+        }
     }
 }

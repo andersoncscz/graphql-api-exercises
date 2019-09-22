@@ -1,10 +1,10 @@
-// ****************** Fake data returned from database ******************
+// ****************** Fake data returned from a database ******************
 import { uniqueId } from 'lodash';
 
-export const users = [
+export let users = [
     { 
         id: uniqueId(),
-        profile_id: '1',
+        profileId: '1',
         status: 'ACTIVE',
         name: 'Anderson Cruz',
         email: 'andersoncscz@hotmail.com',
@@ -13,7 +13,7 @@ export const users = [
     },
     { 
         id: uniqueId(),
-        profile_id: '2',
+        profileId: '2',
         status: 'BLOCKED',
         name: 'Patricia Aguiar',
         email: 'patriciaaguiar@hotmail.com',
@@ -22,7 +22,7 @@ export const users = [
     },
     { 
         id: uniqueId(),
-        profile_id: '3',
+        profileId: '3',
         status: 'INACTIVE',
         name: 'Alex Cruz',
         email: 'alexcruz@hotmail.com',

@@ -3,7 +3,7 @@
 #import 'products/index.graphql'
 
 type Query {
-    user(id: ID!): User
+    user(data: UserFilterInput!): User
     users: [User!]!
 
     profile(id: ID!): Profile
@@ -14,5 +14,8 @@ type Query {
 }
 
 type Mutation {
-    createUser(name: String!, email: String!) : User!
+    createUser(data: UserInput!): User!
+    updateUser(data: UserInput!): User!
+    deleteUser(data: UserFilterInput!): User
 }
+
